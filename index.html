@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/style.css">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Andrew, Naw Naw, Roberto">
+  <meta name="description" content="Bird identification project for CSE 455 final">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Raleway:wght@300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Bird Identification Project</title>
+</head>
+
+
+<body>
+    <header>
+        <nav class="">
+          <ul>
+            <li><a class="nav-link" href="#"><span class="material-icons" aria-label="Home">home</span></a></li>
+            <li><a class="nav-link" href="#description">Project Description</a></li>
+            <li><a class="nav-link" href="#prevwork">Previous Work</a></li>
+            <li><a class="nav-link" href="#approach">Our Approach</a></li>
+            <li><a class="nav-link" href="#data">Datasets</a></li>
+            <li><a class="nav-link" href="#results">Results</a></li>
+            <li><a class="nav-link" href="#discuss">Discussion</a></li>
+          </ul>            
+        </nav>
+    </header>
+
+    <main>
+        <section id="head"> 
+          <h1>CSE 455 Sp2023 Final Project</h1>
+          <p>By Andrew, Naw Naw, and Roberto</p>
+        </section>
+        <section id="description"> 
+            <div class="container">
+              <h2>Description</h2>
+              <p>Our goal with this project was to create a machine learning model based on the Kaggle bird identification training set that could identify the different bird species present with high accuracy. </p>
+            </div>
+          </section>
+        <section id="prevwork"> 
+          <div class="container">
+            <h2>About us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tenetur facere maiores vel id quos, nisi veniam dolorum? Perspiciatis accusantium laboriosam laudantium earum ex nobis aperiam debitis. Adipisci, deleniti reprehenderit error debitis vitae consectetur, officia alias consequatur aliquid doloremque eveniet, animi qui? Optio obcaecati assumenda asperiores quis cum accusantium sint!</p>
+            <p>In addition, we built our model using a number of pretrained models. These include: </p>
+            <ul>
+                <li>resnext</li>
+                <li>resnet18</li>
+                <li>resnet152</li>
+            </ul>
+          </div>
+        </section>
+        <section id="approach"> 
+            <div class="container">
+                <h2>Our Approach</h2>
+                <p>We tried a number of methods for training our model:</p>
+                <ul>
+                    <li>keep training with the same learning rate for a few epoch (i.e. 2 to 4 epochs)  as long as the loss is still notably decreasing otherwise reduced learning rate and continue training</li>
+                    <li>using pre trained features extract through freezing the weights except the fully connected layer</li>
+                </ul>
+                <p>Training resnet18 process:</p>
+                <ul>
+                    <li>keep training with the same learning rate for a few epoch (i.e. 2 to 4 epochs)  as long as the loss is still notably decreasing otherwise reduced learning rate and continue training</li>
+                    <li>using pre trained features extract through freezing the weights except the fully connected layer</li>
+                </ul>
+                <p>Training only fully connected layer of pretrained resnet50 process:</p>
+                <p>training pretrained resnet152 process:</p>
+            </div>
+          </section>
+          <section id="data"> 
+            <div class="container">
+              <h2>Datasets</h2>
+              <p>Our only dataset we used was the dataset provided in the Kaggle competition. The dataset is broken down into a training set and a testing set, but the testing set lacks any labels since it’s meant to provide a result for the kaggle competition. To quickly test the accuracy of our model without having to upload our model’s results every time, we tested the model on its training set again. While this may give a slightly skewed result for the model’s accuracy, it’s a good approximation for how our model would respond to an actual test set of images.</p>
+            </div>
+          </section>
+          <section id="results"> 
+            <div class="container">
+              <h2>Results</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur tenetur facere maiores vel id quos, nisi veniam dolorum? Perspiciatis accusantium laboriosam laudantium earum ex nobis aperiam debitis. Adipisci, deleniti reprehenderit error debitis vitae consectetur, officia alias consequatur aliquid doloremque eveniet, animi qui? Optio obcaecati assumenda asperiores quis cum accusantium sint!</p>
+              <p>Doloribus odio nihil ipsam, provident ducimus libero eveniet cum molestiae accusantium laborum sunt voluptatum. Praesentium debitis nihil iure nobis corrupti, saepe adipisci voluptates quos doloribus, iusto dicta facere. Similique laborum maxime modi repellendus aliquam, natus voluptates deserunt ut itaque numquam nisi explicabo consequatur eligendi sed temporibus atque quisquam eaque illum.</p>
+            </div>
+          </section>
+          <section id="discuss"> 
+            <div class="container">
+              <h2>Discussion</h2>
+              <ul>
+                <li>
+                    <h3>What problems did we encounter?</h3>
+                    <p>We ran into a number of issues with our model. Our project was made and run in Google Collab, allowing each group member to contribute to and run the model’s code. However, this brought the downside of Google’s runtime limits, which will stop our model from running for more than ~20 minutes. This limits the potential of our model’s accuracy significantly, and required us to weigh the model’s test accuracy with its training efficiency. </p>
+                </li>
+                <li>
+                    <h3>Are there next steps we would take if you kept working on the project?</h3>
+                    <p>We ran into a number of issues with our model. Our project was made and run in Google Collab, allowing each group member to contribute to and run the model’s code. However, this brought the downside of Google’s runtime limits, which will stop our model from running for more than ~20 minutes. This limits the potential of our model’s accuracy significantly, and required us to weigh the model’s test accuracy with its training efficiency. </p>
+                </li>
+                <li>
+                    <h3>How does your approach differ from others? Was that beneficial?</h3>
+                    <p>We ran into a number of issues with our model. Our project was initially made and run in Google Collab, allowing each group member to contribute to and run the model’s code. However, this brought the downside of Google’s runtime limits, which will stop our model from running for more than ~20 minutes. This limits the potential of our model’s accuracy significantly, and required us to weigh the model’s test accuracy with its training efficiency. </p>
+                </li>
+              </ul>
+              </div>
+          </section>
+      </main>
+      
+      <footer>
+        <div class="container">
+          <p>&copy; 2023 Andrew, Naw Naw, and Roberto</p>
+        </div>
+      </footer>
+</body>
+
+</html>
