@@ -77,23 +77,31 @@
                     <li>Finally, train for another 4 epochs with smaller learning rate of 1e-4</li>
                 </ul>
                 <p>Training only the linear fully connected layer of the pretrained resnet50 process</p>
+                <ul>
                   <li>Trained only the last fully connected layer of resnet 50</li>
                   <li>In this case it used pretrained feature extractors and learn the classifier</li>
                   <li>Tried a learning rate of 1e-2 for 10 epochs</li>
                   <li>Switched to a learning rate of 1e-4 until 14 epochs</li>
                   <li>Finished with a learning rate of 1e-4 while training until 18 epochs were completed</li>
                   <li>The training loss seemed worse than the pre-trained resnet18 when we were updating the weights for every layer</li>
+                </ul>
                 <p>training pretrained resnet152 process:</p>
+                <ul>
                   <li>Trained with a learning rate of 1e-2 for the first 6 epochs</li>
                   <li>Reduced the learning rate to 1e-3 and trained until 9 epochs completed</li>
                   <li>Continued training with a learning rate of 1e-4 until the loss converged</li>
                   <li>Trained for a few more epochs with a learning rate of 1e-5 to see the effect</li>
+                </ul>
                 <p>Training resnext:</p>
+                <ul>
                   <li>Decreased the learning rate over time as the loss got closer to convergence. Also decreased the momentum, starting at 0.9 and down to 0.5 at the final epoch of training.</li>
+                </ul>
                 <p>Training resnet152 - fine tuning:</p>
+                <ul>
                   <li>Trained the 3 fully connected linear layers for 5 epochs with the pretrained model frozen</li>
                   <li>Unfroze the pre-trained model and trained the entire model until 23 epochs were completed</li>
                   <li>Used grid search to find the best learning rate and momentum values, then trained 3 epochs at a time.</li>
+                </ul>
             </div>
           </section>
           <section id="data"> 
@@ -133,10 +141,12 @@
           <section id="code">
             <div class="container">
               <h2>Code:</h2>
-              <a href="https://colab.research.google.com/drive/1t8AouZWwAiEkUcbecu55ljsZSphF1nvO?usp=sharing">Colab Code</a>
-              <a href="https://drive.google.com/file/d/1sJQYuXkMf0Aa5P7ajxM7GJesDzAFnMgh/view?usp=sharing">Kaggle Code</a>
-              <a href="https://drive.google.com/file/d/1njDq7l_odHPdsV4wvFf-Pcu4a0ns6S0p/view?usp=sharing">Kaggle Code</a>
-              <a href="https://drive.google.com/file/d/14Z6Pml_Ih6gHgkt8QmGvOndIDx202GrP/view?usp=drive_link">Kaggle Code</a>
+              <ul>
+                <li><a href="https://colab.research.google.com/drive/1t8AouZWwAiEkUcbecu55ljsZSphF1nvO?usp=sharing">Colab Code</a></li>
+                <li><a href="https://drive.google.com/file/d/1sJQYuXkMf0Aa5P7ajxM7GJesDzAFnMgh/view?usp=sharing">resnet-18 Kaggle Code</a></li>
+                <li><a href="https://drive.google.com/file/d/1njDq7l_odHPdsV4wvFf-Pcu4a0ns6S0p/view?usp=sharing">resnet-50 Kaggle Code</a></li>
+                <li><a href="https://drive.google.com/file/d/14Z6Pml_Ih6gHgkt8QmGvOndIDx202GrP/view?usp=drive_link">resnet-152 Kaggle Code</a></li>
+              </ul>
             </div>
           </section>
       </main>
