@@ -174,28 +174,54 @@
                   <figcaption>&emsp; resnext101 after 9 epochs</figcaption>
               </div>
             </div>
+            <table>
+              <tr>
+                <td>model</td>
+                <td>test accuracy</td>
+              </tr>
+              <tr>
+                <td>resnet18</td>
+                <td>63.50%</td>
+              </tr>
+              <tr>
+                <td>resnet50 fc</td>
+                <td>38.65%</td>
+              </tr>
+              <tr>
+                <td>resnet152</td>
+                <td>74.55%</td>
+              </tr>
+              <tr>
+                <td>resnext101_64x4d</td>
+                <td>70.40%</td>
+              </tr>
+            </table>
           </section>
           <section id="discuss"> 
             <div class="container">
               <h2>Discussion</h2>
               <ul>
-                <li>
-                  <li>test <</li>
-                </li>
-                <li>
-                    <h3>What problems did we encounter?</h3>
-                    <li>Selecting that model is the best of both worlds in terms of training efficiency and test accuracy. Being able to train with the least number of epochs while still converging at a low loss with a higher accuracy.</li>
+                <li><p>Training the entire neural network has a faster convergence rate than training only the fully connected layer. This can be observed in resnet18 and resent50 and their respective loss graphs. This is true even if the model has more layers, i.e. resnet 152 achieves much smaller loss for in 4 epochs. This makes sense because the model only trained on the fully connected layer has less parameters and therefore is not able to capture every possible relationship in the dataset. 
+                </p></li>
+                <li><p>Pretrained neural network trained on the entire network with a much smaller number of layers achieves better test accuracy than a pre pre-trained neural network with much more layers but only trained only the fully connected layer. 
+               </p> </li>
+               <li><p>We were not able to make advantage of the scheduler as It was difficult to tell when to reduce the learning rate since the loss would bounce around for a quite bit and then it would decrease very noticeably, so it was a lot of worth monitoring the loss graph and reduced the learning rate appropriately
+              </p></li>
+              <li><h3>What problems did we encounter?</h3></li>
+                <ul>
+                    <li>Selecting that model is the best of both worlds in terms of training efficiency and test accuracy.</li>
                     <li>Not enough time to properly test out many different models</li>
                     <li>Google Colab running out of GPU, transferring checkpoints between accounts for continued training with another account on Colab.</li>
-                </li>
-                <li>
-                    <h3>Are there next steps we would take if you kept working on the project?</h3>
-                    <p>Further training of the resnet152 model with fine tuning (where we first froze the pre-trained model, then unfroze it later) as it has not converged to some loss yet. </p>
-                </li>
-                <li>
-                    <h3>How does your approach differ from others? Was that beneficial?</h3>
-                    <p>We decided to go with a wide approach where we tried many different models. It was detrimental in that training each model until convergence took a long time. It was beneficial in that we got a snapshot of the loss of each model with an idea of how the accuracy would turn out.</p>
-                </li>
+                </ul>
+                <li><h3>Are there next steps we would take if you kept working on the project?</h3></li>
+                <ul>
+                    <li><p>Further training of the resnet152 model with fine tuning (where we first froze the pre-trained model, then unfroze it later) as it has not converged to some loss yet. </p></li>
+                    <li><p>Being more organized with training proces and note down what we did when tuning the model.</p></li>
+                </ul>
+                <li><h3>How does your approach differ from others? Was that beneficial?</h3></li>
+                <ul>
+                    <li><p>We decided to go with a wide approach where we tried many different models. It was detrimental in that training each model until convergence took a long time. It was beneficial in that we got a snapshot of the loss of each model with an idea of how the accuracy would turn out.</p></li>
+                </ul>
               </ul>
               </div>
           </section>
